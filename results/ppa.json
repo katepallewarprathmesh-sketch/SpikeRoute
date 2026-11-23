@@ -1,0 +1,9 @@
+{
+  "tool": "Yosys 0.52 generic synth",
+  "top": "router",
+  "generic_cell_count": 8898,
+  "timing": "not measured; no target library or clock constraint",
+  "area": "not measured; generic cell count is not physical area",
+  "power": "not measured",
+  "limitations": "No technology mapping, placement, routing, parasitic extraction, or signoff STA/power."
+}

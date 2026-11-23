@@ -1,0 +1,2 @@
+pattern,offered_rate_flits_per_cycle,fanout,packets,mean_latency_cycles,max_latency_cycles,reciprocal_latency_flits_per_cycle,measurement
+single_unicast,not_swept,1,1,2,2,0.500000,one-packet smoke; reciprocal latency is not saturation throughput

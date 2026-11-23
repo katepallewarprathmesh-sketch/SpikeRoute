@@ -1,0 +1,1 @@
+Single-router coverage: unicast, default-route, local-drop, fan-out 2, fan-out 4, credit-stall, stall-recovery, counters - all hit.

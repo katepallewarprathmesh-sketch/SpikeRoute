@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 6
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal -D FORMAL router.sv router_formal.sv
+prep -top router_formal
+
+[files]
+../rtl/router.sv
+router_formal.sv

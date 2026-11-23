@@ -1,0 +1,2 @@
+Yosys generic synth cell count: 8898
+No technology mapping, placement, routing, parasitic extraction, or signoff STA/power.

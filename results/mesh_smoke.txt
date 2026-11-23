@@ -1,0 +1,1 @@
+2x2 mesh R0-local -> R1-local unicast PASS; forwarded counters=[1, 1, 0, 0]; latency=2 cycles.

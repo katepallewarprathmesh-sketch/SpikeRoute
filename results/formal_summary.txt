@@ -1,0 +1,1 @@
+PASS: reduced single-router FIFO/credit bounds and atomic grant consistency; k-induction, depth 6. Not a proof of exact packet conservation, RR fairness, or mesh deadlock freedom.

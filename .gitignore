@@ -1,0 +1,10 @@
+# Simulation/build outputs
+**/sim_build/
+**/__pycache__/
+**/*.pyc
+**/results.xml
+formal/router/
+formal/router_bmc/
+*.vcd
+*.fst
+*.log.tmp
