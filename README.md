@@ -11,11 +11,11 @@ make results    # refresh mesh smoke latency CSV/plot and generic Yosys cell-cou
 make clean
 ```
 
-Requires Verilator, cocotb 1.9.2, Python 3, and for `make test`, Yosys/SymbiYosys with z3. `docs/toolchain.md` lists the verified versions. `make smoke` omits formal for environments without SymbiYosys.
+Requires Verilator, cocotb 1.9.2, Python 3, and for `make test`, Yosys/SymbiYosys with z3. `make smoke` omits formal for environments without SymbiYosys.
 
 ## Design
 
-See [spec](docs/spec.md), [verification plan](docs/verification_plan.md), and [ADRs](docs/adr/). Ports are N/E/S/W/Local = 0..4 and each flit is `{key[15:0],payload[15:0]}`. See the spec for route-table priority, default routing, credit return, mesh topology and atomic multicast contract.
+Ports are N/E/S/W/Local = 0..4 and each flit is `{key[15:0],payload[15:0]}`. Routing is masked-key table lookup with default opposite-port forwarding for transit packets, credit flow control, and atomic multicast grants.
 
 ## Evidence pack (Rule Zero)
 
