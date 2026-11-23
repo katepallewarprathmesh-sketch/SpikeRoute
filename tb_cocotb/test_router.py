@@ -10,7 +10,6 @@ import sys
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge
-import numpy as np
 
 RESULTS = os.path.join(os.path.dirname(__file__), "..", "results")
 os.makedirs(RESULTS, exist_ok=True)
