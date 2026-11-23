@@ -23,7 +23,7 @@ A four-router 2×2 mesh for event-driven systems. Each router provides five-port
 | Reduced-router safety proof | PASS by k-induction, depth-6 basecase | `results/formal_summary.txt`, `results/formal_*.log` |
 | Generic Yosys synthesis | 8,898 generic cells | `results/ppa.json`, `results/ppa_summary.txt` |
 
-The formal assertions cover FIFO and credit upper bounds plus grant/output consistency in the reduced single-router instance. The current latency point is a directed smoke measurement; offered-load saturation and traffic-pattern curves are the next characterization milestone. The generic cell count is a structural synthesis result.
+The formal assertions cover FIFO and credit upper bounds plus grant/output consistency in the reduced single-router instance. They do not establish end-to-end packet conservation/no loss, exact multicast destination-set delivery, round-robin fairness, or mesh deadlock freedom. Multicast fan-out 2/4 is exercised by directed single-router tests; the 2×2 mesh evidence is one directed unicast transfer. Its 2-cycle latency is a single-packet smoke point, not a latency-vs-load curve or throughput result. The generic cell count is a structural synthesis result, not physical area.
 
 ## Reproduce
 
@@ -38,7 +38,11 @@ Requirements: Verilator, cocotb 1.9.2, Python 3; `make test` additionally uses Y
 
 ## Roadmap
 
-Extend the traffic bench with uniform, hotspot and bursty patterns; add fan-out and injection-rate sweeps; and measure contention fairness and destination-set delivery under multi-packet traffic.
+Add end-to-end packet-conservation and destination-set checks, then extend the traffic bench with uniform, hotspot and bursty patterns, fan-out and injection-rate sweeps, and contention-fairness measurements. `tb_uvm/` is porting guidance only; no VCS/Questa UVM run is included.
+
+## Tested tool versions
+
+Versions observed in the local run: Verilator 5.032, cocotb 1.9.2, Yosys 0.52, Python 3.13.18, and Z3 5.4.1. The repository does not yet pin a complete toolchain image; record any different versions when reproducing.
 
 ## License
 
